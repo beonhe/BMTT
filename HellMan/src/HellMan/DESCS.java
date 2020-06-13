@@ -12,7 +12,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.logging.Level;
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
 import javax.swing.JOptionPane;
 import javax.tools.FileObject;
 
@@ -47,9 +56,9 @@ public class DESCS extends javax.swing.JFrame {
         btnMokhoaB = new javax.swing.JButton();
         btnGhiFile = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtPlainText = new javax.swing.JTextArea();
+        txtVanBan = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtCipherText = new javax.swing.JTextArea();
+        txtMaHoa = new javax.swing.JTextArea();
         btnGiaima = new javax.swing.JButton();
         btnAllShow = new javax.swing.JButton();
 
@@ -89,13 +98,13 @@ public class DESCS extends javax.swing.JFrame {
             }
         });
 
-        txtPlainText.setColumns(20);
-        txtPlainText.setRows(5);
-        jScrollPane1.setViewportView(txtPlainText);
+        txtVanBan.setColumns(20);
+        txtVanBan.setRows(5);
+        jScrollPane1.setViewportView(txtVanBan);
 
-        txtCipherText.setColumns(20);
-        txtCipherText.setRows(5);
-        jScrollPane2.setViewportView(txtCipherText);
+        txtMaHoa.setColumns(20);
+        txtMaHoa.setRows(5);
+        jScrollPane2.setViewportView(txtMaHoa);
 
         btnGiaima.setText("Giai ma");
         btnGiaima.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +184,40 @@ public class DESCS extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static void encrypt(String key, InputStream is, OutputStream os) throws Throwable {
+		encryptOrDecrypt(key, Cipher.ENCRYPT_MODE, is, os);
+	}
+    public static void decrypt(String key, InputStream is, OutputStream os) throws Throwable {
+		encryptOrDecrypt(key, Cipher.DECRYPT_MODE, is, os);
+	}
+    public static void encryptOrDecrypt(String key, int mode, InputStream is, OutputStream os) throws Throwable {
+
+		DESKeySpec dks = new DESKeySpec(key.getBytes());
+		SecretKeyFactory skf = SecretKeyFactory.getInstance("DES");
+		SecretKey desKey = skf.generateSecret(dks);
+		Cipher cipher = Cipher.getInstance("DES"); // DES/ECB/PKCS5Padding for SunJCE
+
+		if (mode == Cipher.ENCRYPT_MODE) {
+			cipher.init(Cipher.ENCRYPT_MODE, desKey);
+			CipherInputStream cis = new CipherInputStream(is, cipher);
+			doCopy(cis, os);
+		} else if (mode == Cipher.DECRYPT_MODE) {
+			cipher.init(Cipher.DECRYPT_MODE, desKey);
+			CipherOutputStream cos = new CipherOutputStream(os, cipher);
+			doCopy(is, cos);
+		}
+	}
+    public static void doCopy(InputStream is, OutputStream os) throws IOException {
+		byte[] bytes = new byte[64];
+		int numBytes;
+		while ((numBytes = is.read(bytes)) != -1) {
+			os.write(bytes, 0, numBytes);
+		}
+		os.flush();
+		os.close();
+		is.close();
+	}
+    
     private void btnAllShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAllShowActionPerformed
         try {
             BufferedReader br = null;
@@ -200,8 +243,8 @@ public class DESCS extends javax.swing.JFrame {
             System.out.println("Du lieu la: "+sb);
             String chuoi = sb.toString();
             String chuoi1 = sb1.toString();
-            txtPlainText.setText(chuoi);
-            txtCipherText.setText(chuoi1);
+            txtVanBan.setText(chuoi);
+            txtMaHoa.setText(chuoi1);
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnAllShowActionPerformed
@@ -212,10 +255,11 @@ public class DESCS extends javax.swing.JFrame {
             FileInputStream fis = new FileInputStream("D:\\Des.txt");
             FileOutputStream fos = new FileOutputStream("D:\\EnDes.txt");
             encrypt(key,fis,fos);
-            JOptionPane.showMessageDialog(null, "Da ma hoa van ban");
-            
+            JOptionPane.showMessageDialog(null, "Da ma hoa van ban");        
         } catch (Exception e) {
             e.printStackTrace();
+        } catch (Throwable ex) {
+            java.util.logging.Logger.getLogger(DESCS.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnMahoaActionPerformed
 
@@ -236,7 +280,7 @@ public class DESCS extends javax.swing.JFrame {
             String chuoi = sb.toString();
             txtKhoa.setText(chuoi);
         } catch (Exception e) {
-            //Logger.getLogger(DESCS.class.getName()).log(Level.SEVERE,null,ex);
+            java.util.logging.Logger.getLogger(DESCS.class.getName()).log(Level.SEVERE, null, e);
         }
     }//GEN-LAST:event_btnMokhoaAActionPerformed
 
@@ -264,12 +308,12 @@ public class DESCS extends javax.swing.JFrame {
         try {
             BufferedWriter bw = null;
             String fileName = "D:\\Des.txt";
-            String s = txtPlainText.getText();
+            String s = txtVanBan.getText();
             bw = new BufferedWriter(new FileWriter(fileName));
             bw.write(s);
             bw.close();
             JOptionPane.showMessageDialog(null, "Da ghi file");
-            txtCipherText.setText(s);
+            txtMaHoa.setText(s);
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnGhiFileActionPerformed
@@ -294,8 +338,10 @@ public class DESCS extends javax.swing.JFrame {
             br.close();
             System.out.println("Du lieu la: "+sb);
             String chuoi = sb.toString();
-            txtCipherText.setText(chuoi);
+            txtMaHoa.setText(chuoi);
         } catch (Exception e) {
+        } catch (Throwable ex) {
+            java.util.logging.Logger.getLogger(DESCS.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnGiaimaActionPerformed
 
@@ -346,8 +392,8 @@ public class DESCS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea txtCipherText;
     private javax.swing.JTextField txtKhoa;
-    private javax.swing.JTextArea txtPlainText;
+    private javax.swing.JTextArea txtMaHoa;
+    private javax.swing.JTextArea txtVanBan;
     // End of variables declaration//GEN-END:variables
 }

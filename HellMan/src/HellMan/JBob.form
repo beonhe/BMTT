@@ -35,10 +35,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtAliceKey" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
-                          <Component id="txtBoBAlice" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
-                          <Component id="txtKABAlice" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
-                          <Component id="txtABAlice" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                          <Component id="txtKhoaB" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                          <Component id="txtKhoaA" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                          <Component id="txtKhoaChung" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                          <Component id="txtMahoa" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
                           <Component id="btnMahoaGiaima" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -46,7 +46,7 @@
                           <Component id="btnMaHoaAb" min="-2" max="-2" attributes="0"/>
                           <Component id="btnKhoaChung" min="-2" max="-2" attributes="0"/>
                           <Component id="btnHienThiKB" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnTaoKhoaA" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnTaoKhoaB" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -66,25 +66,25 @@
               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtAliceKey" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnTaoKhoaA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtKhoaB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTaoKhoaB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBoBAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtKhoaA" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnHienThiKB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtKABAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtKhoaChung" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnKhoaChung" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtABAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtMahoa" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnMaHoaAb" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="40" max="32767" attributes="0"/>
@@ -100,7 +100,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ALICE"/>
+        <Property name="text" type="java.lang.String" value="Bob"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -123,31 +123,31 @@
         <Property name="text" type="java.lang.String" value="Ma hoa AB"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtAliceKey">
+    <Component class="javax.swing.JTextField" name="txtKhoaB">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBoBAlice">
+    <Component class="javax.swing.JTextField" name="txtKhoaA">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBoBAliceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKhoaAActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtKABAlice">
+    <Component class="javax.swing.JTextField" name="txtKhoaChung">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKABAliceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKhoaChungActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtABAlice">
+    <Component class="javax.swing.JTextField" name="txtMahoa">
     </Component>
-    <Component class="javax.swing.JButton" name="btnTaoKhoaA">
+    <Component class="javax.swing.JButton" name="btnTaoKhoaB">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tao Khoa A"/>
+        <Property name="text" type="java.lang.String" value="Tao Khoa B"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaoKhoaAActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaoKhoaBActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnHienThiKB">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hien Thi KB"/>
+        <Property name="text" type="java.lang.String" value="Hien Thi KA"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHienThiKBActionPerformed"/>

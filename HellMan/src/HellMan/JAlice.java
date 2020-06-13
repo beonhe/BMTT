@@ -53,10 +53,10 @@ public class JAlice extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtAliceKey = new javax.swing.JTextField();
-        txtBoBAlice = new javax.swing.JTextField();
-        txtKABAlice = new javax.swing.JTextField();
-        txtABAlice = new javax.swing.JTextField();
+        txtKhoaA = new javax.swing.JTextField();
+        txtKhoaB = new javax.swing.JTextField();
+        txtKhoaChung = new javax.swing.JTextField();
+        txtMaHoa = new javax.swing.JTextField();
         btnTaoKhoaA = new javax.swing.JButton();
         btnHienThiKB = new javax.swing.JButton();
         btnKhoaChung = new javax.swing.JButton();
@@ -76,15 +76,15 @@ public class JAlice extends javax.swing.JFrame {
 
         jLabel5.setText("Ma hoa AB");
 
-        txtBoBAlice.addActionListener(new java.awt.event.ActionListener() {
+        txtKhoaB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBoBAliceActionPerformed(evt);
+                txtKhoaBActionPerformed(evt);
             }
         });
 
-        txtKABAlice.addActionListener(new java.awt.event.ActionListener() {
+        txtKhoaChung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKABAliceActionPerformed(evt);
+                txtKhoaChungActionPerformed(evt);
             }
         });
 
@@ -138,10 +138,10 @@ public class JAlice extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAliceKey, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtBoBAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtKABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaA, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaB, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaChung, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMaHoa, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnMahoaGiaima))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,22 +162,22 @@ public class JAlice extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtAliceKey, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKhoaA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTaoKhoaA))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtBoBAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKhoaB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHienThiKB))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtKABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKhoaChung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnKhoaChung))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMaHoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMaHoaAb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(btnMahoaGiaima)
@@ -187,13 +187,13 @@ public class JAlice extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtKABAliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKABAliceActionPerformed
+    private void txtKhoaChungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKhoaChungActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKABAliceActionPerformed
+    }//GEN-LAST:event_txtKhoaChungActionPerformed
 
-    private void txtBoBAliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBoBAliceActionPerformed
+    private void txtKhoaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKhoaBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtBoBAliceActionPerformed
+    }//GEN-LAST:event_txtKhoaBActionPerformed
 
     private void btnTaoKhoaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaoKhoaAActionPerformed
         try {
@@ -212,7 +212,7 @@ public class JAlice extends javax.swing.JFrame {
             FileOutputStream fos = new FileOutputStream("D:/A.pub");
             fos.write(alicePubKeyEnc);
             fos.close();
-            txtAliceKey.setText(alicePubKeyEnc.toString());
+            txtKhoaA.setText(alicePubKeyEnc.toString());
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnTaoKhoaAActionPerformed
@@ -223,7 +223,7 @@ public class JAlice extends javax.swing.JFrame {
             byte[] bkeyP = new byte[fis.available()];
             fis.read(bkeyP);
             fis.close();
-            txtBoBAlice.setText(bkeyP.toString());
+            txtKhoaB.setText(bkeyP.toString());
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnHienThiKBActionPerformed
@@ -241,7 +241,7 @@ public class JAlice extends javax.swing.JFrame {
             aliceKeyAgree.doPhase(bobPubKey,true);
             byte[] aliceSharedSecret = aliceKeyAgree.generateSecret();
             System.out.println("khoa chung: secret (DEBUG ONLY):"+CryptoUtil.toHexString(aliceSharedSecret));
-            txtKABAlice.setText(CryptoUtil.toHexString(aliceSharedSecret));
+            txtKhoaChung.setText(CryptoUtil.toHexString(aliceSharedSecret));
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnKhoaChungActionPerformed
@@ -250,7 +250,7 @@ public class JAlice extends javax.swing.JFrame {
         try {
             aliceKeyAgree.doPhase(bobPubKey,true);
             aliceDesKey = aliceKeyAgree.generateSecret("DES");
-            txtABAlice.setText(aliceDesKey.toString());
+            txtMaHoa.setText(aliceDesKey.toString());
             BufferedWriter bw = null;
             String fileName = "D:\\KhoaA.txt";
             bw = new BufferedWriter(new FileWriter(fileName));
@@ -311,9 +311,9 @@ public class JAlice extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtABAlice;
-    private javax.swing.JTextField txtAliceKey;
-    private javax.swing.JTextField txtBoBAlice;
-    private javax.swing.JTextField txtKABAlice;
+    private javax.swing.JTextField txtKhoaA;
+    private javax.swing.JTextField txtKhoaB;
+    private javax.swing.JTextField txtKhoaChung;
+    private javax.swing.JTextField txtMaHoa;
     // End of variables declaration//GEN-END:variables
 }

@@ -54,11 +54,11 @@ public class JBob extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtAliceKey = new javax.swing.JTextField();
-        txtBoBAlice = new javax.swing.JTextField();
-        txtKABAlice = new javax.swing.JTextField();
-        txtABAlice = new javax.swing.JTextField();
-        btnTaoKhoaA = new javax.swing.JButton();
+        txtKhoaB = new javax.swing.JTextField();
+        txtKhoaA = new javax.swing.JTextField();
+        txtKhoaChung = new javax.swing.JTextField();
+        txtMahoa = new javax.swing.JTextField();
+        btnTaoKhoaB = new javax.swing.JButton();
         btnHienThiKB = new javax.swing.JButton();
         btnKhoaChung = new javax.swing.JButton();
         btnMaHoaAb = new javax.swing.JButton();
@@ -67,7 +67,7 @@ public class JBob extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("ALICE");
+        jLabel1.setText("Bob");
 
         jLabel2.setText("Khoa Alice:");
 
@@ -77,26 +77,26 @@ public class JBob extends javax.swing.JFrame {
 
         jLabel5.setText("Ma hoa AB");
 
-        txtBoBAlice.addActionListener(new java.awt.event.ActionListener() {
+        txtKhoaA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBoBAliceActionPerformed(evt);
+                txtKhoaAActionPerformed(evt);
             }
         });
 
-        txtKABAlice.addActionListener(new java.awt.event.ActionListener() {
+        txtKhoaChung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKABAliceActionPerformed(evt);
+                txtKhoaChungActionPerformed(evt);
             }
         });
 
-        btnTaoKhoaA.setText("Tao Khoa A");
-        btnTaoKhoaA.addActionListener(new java.awt.event.ActionListener() {
+        btnTaoKhoaB.setText("Tao Khoa B");
+        btnTaoKhoaB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTaoKhoaAActionPerformed(evt);
+                btnTaoKhoaBActionPerformed(evt);
             }
         });
 
-        btnHienThiKB.setText("Hien Thi KB");
+        btnHienThiKB.setText("Hien Thi KA");
         btnHienThiKB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHienThiKBActionPerformed(evt);
@@ -139,17 +139,17 @@ public class JBob extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAliceKey, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtBoBAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtKABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaB, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaA, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKhoaChung, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMahoa, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnMahoaGiaima))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnMaHoaAb)
                             .addComponent(btnKhoaChung)
                             .addComponent(btnHienThiKB)
-                            .addComponent(btnTaoKhoaA)))
+                            .addComponent(btnTaoKhoaB)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(242, 242, 242)
                         .addComponent(jLabel1)))
@@ -163,22 +163,22 @@ public class JBob extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtAliceKey, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTaoKhoaA))
+                    .addComponent(txtKhoaB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTaoKhoaB))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtBoBAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKhoaA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHienThiKB))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtKABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKhoaChung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnKhoaChung))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtABAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMahoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMaHoaAb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(btnMahoaGiaima)
@@ -188,24 +188,24 @@ public class JBob extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtKABAliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKABAliceActionPerformed
+    private void txtKhoaChungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKhoaChungActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKABAliceActionPerformed
+    }//GEN-LAST:event_txtKhoaChungActionPerformed
 
-    private void txtBoBAliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBoBAliceActionPerformed
+    private void txtKhoaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKhoaAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtBoBAliceActionPerformed
+    }//GEN-LAST:event_txtKhoaAActionPerformed
 
-    private void btnTaoKhoaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaoKhoaAActionPerformed
+    private void btnTaoKhoaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaoKhoaBActionPerformed
         try {
             FileInputStream fis = new FileInputStream("D:/A.pub");
             byte[] akeyP = new byte[fis.available()];
             fis.read(akeyP);
             fis.close();
-            txtAliceKey.setText(akeyP.toString());
+            txtKhoaB.setText(akeyP.toString());
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_btnTaoKhoaAActionPerformed
+    }//GEN-LAST:event_btnTaoKhoaBActionPerformed
 
     private void btnHienThiKBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHienThiKBActionPerformed
         try {
@@ -237,7 +237,7 @@ public class JBob extends javax.swing.JFrame {
             FileOutputStream fos = new FileOutputStream("D:/B.pub");
             fos.write(bobPubKeyEnc);
             fos.close();
-            txtBoBAlice.setText(bobPubKeyEnc.toString());
+            txtKhoaA.setText(bobPubKeyEnc.toString());
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnHienThiKBActionPerformed
@@ -247,7 +247,7 @@ public class JBob extends javax.swing.JFrame {
             bobKeyAgree.doPhase(alicePubKey,true);
             byte[] bobSharedSecret = bobKeyAgree.generateSecret();
             System.out.println("Khoa chung :Shared secret (DEBUG ONLY): "+CryptoUtil.toHexString(bobSharedSecret));
-            txtKABAlice.setText(CryptoUtil.toHexString(bobSharedSecret));
+            txtKhoaChung.setText(CryptoUtil.toHexString(bobSharedSecret));
             
         } catch (Exception e) {
         }
@@ -257,7 +257,7 @@ public class JBob extends javax.swing.JFrame {
         try {
             bobKeyAgree.doPhase(alicePubKey,true);
             bobDesKey = bobKeyAgree.generateSecret("DES");
-            txtABAlice.setText(bobDesKey.toString());
+            txtMahoa.setText(bobDesKey.toString());
             BufferedWriter bw = null;
             String fileName = "D:\\KhoaB.txt";
             bw = new BufferedWriter(new FileWriter(fileName));
@@ -314,15 +314,15 @@ public class JBob extends javax.swing.JFrame {
     private javax.swing.JButton btnKhoaChung;
     private javax.swing.JButton btnMaHoaAb;
     private javax.swing.JButton btnMahoaGiaima;
-    private javax.swing.JButton btnTaoKhoaA;
+    private javax.swing.JButton btnTaoKhoaB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtABAlice;
-    private javax.swing.JTextField txtAliceKey;
-    private javax.swing.JTextField txtBoBAlice;
-    private javax.swing.JTextField txtKABAlice;
+    private javax.swing.JTextField txtKhoaA;
+    private javax.swing.JTextField txtKhoaB;
+    private javax.swing.JTextField txtKhoaChung;
+    private javax.swing.JTextField txtMahoa;
     // End of variables declaration//GEN-END:variables
 }
